@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Management System</title>
+</head>
+<body>
+
+<div align="center">
+   <h1>Employee List</h1>
+   <table>
+       <thead>
+          <tr>
+             <th>Employee id</th>
+             <th>Employee First Name</th>
+             <th>Employee Last Name</th> 
+             <th>Employee address</th>
+             <th>Employee designation</th>
+              <th>Employee start date</th>
+              <th>Employee end date</th>
+              <th>Employee gender</th>
+              <th>Employee status</th>
+              <th>Employee department</th>
+              <th>Employee EmploymentID</th>
+              <th>Employee DOB</th>
+              <th>Employee reporting manager</th>
+              <th>Employee bloodgroup</th>
+          </tr>
+       </thead>
+       <body>
+            <tr th:each="employee : ${listEmployees}">
+            <td th:text="${employee.firstName}"></td>
+            <td th:text="${employee.lastName}"></td>
+            <td th:text="${employee.id}"></td>
+            <td th:text="${employee.address}"></td>
+            <td th:text="${employee.status}"></td>
+            <td th:text="${employee.reporting manager}"></td>
+            <td th:text="${employee.designation}"></td>
+            <td th:text="${employee.DOB}"></td>
+            <td th:text="${employee.bloodgroup}"></td>
+            <td th:text="${employee.employmentid}"></td>
+            <td th:text="${employee.gender}"></td>
+            <td th:text="${employee.startdate}"></td>
+            <td th:text="${employee.enddate}"></td>
+            
+            </tr>
+       </body> 
+   
+   </table>
+</div>
+</body>
+</html>
